@@ -1,46 +1,40 @@
-/* Import Google Fonts */
+/* Import Google Fonts (Same as before) */
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Montserrat:wght@500;600;700&display=swap');
 
-/* Global Styles
-  - 'Lato' is the new body font for readability.
-  - A subtle wood pattern is added to the body.
-  - 'background-attachment: fixed' creates the parallax scroll effect.
-*/
+/* --- Global Styles: "Modern Slate" Theme --- */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+/* - New "slate" background
+  - New "concrete" texture
+  - Kept the parallax 'fixed' attachment
+*/
 body {
-  background-color: #f4f0e8;
-  background-image: url('https://www.transparenttextures.com/patterns/wood-pattern.png');
+  background-color: #34495e; /* Dark Slate Blue */
+  background-image: url('https://www.transparenttextures.com/patterns/concrete-wall.png');
   font-family: 'Lato', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   background-attachment: fixed; /* <-- Parallax Effect */
 }
 
-/* CV Container
-  - Background is now a warm, off-white like recycled paper.
-  - A shadow makes it "pop" off the wooden background.
-  - Main text color is a dark brown, not black.
-  - Added a subtle border to look more like a "page".
+/* - New "light card" background
+  - New cool-toned text and border colors
 */
 .cv-container {
   max-width: 900px;
-  margin: 40px auto; /* Added margin to see the "desk" background */
+  margin: 40px auto;
   padding: 40px 60px;
-  background-color: #fdfcf7; /* Warm off-white "paper" */
-  color: #4a403a; /* Dark brown text */
+  background-color: #ecf0f1; /* Light Gray "Paper" */
+  color: #333; /* Dark Gray Text */
   line-height: 1.6;
   border-radius: 3px;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-  border: 1px solid #e0d9cf; /* <-- Subtle "page" border */
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+  border: 1px solid #bdc3c7; /* Lighter Gray Border */
 }
 
-/* Header Styles
-  - 'Montserrat' is the new font for headings.
-  - Colors changed to dark, rich browns.
-*/
+/* --- Header Styles --- */
 .cv-header {
   text-align: center;
   margin-bottom: 40px;
@@ -52,12 +46,12 @@ body {
   font-weight: 700;
   letter-spacing: 2px;
   margin-bottom: 15px;
-  color: #3b322c; /* Deepest brown for main heading */
+  color: #2c3e50; /* Deep Slate */
 }
 
 .contact-info {
   font-size: 0.95rem;
-  color: #5c5048;
+  color: #555;
   margin-bottom: 20px;
   display: flex;
   justify-content: center;
@@ -72,43 +66,44 @@ body {
 
 .contact-item strong {
   font-weight: 600;
-  color: #4a403a;
+  color: #34495e;
 }
 
-/* Link color changed from blue to a warm "rust" brown */
+/* - New "Digital Teal" accent color for links
+  - New, more modern hover effect
+*/
 .contact-item a {
-  color: #a05a2c;
+  color: #1abc9c; /* Teal Accent */
   text-decoration: none;
-  transition: all 0.3s ease-in-out; /* <-- Added transition */
+  font-weight: 600;
+  padding: 3px 0;
+  transition: all 0.3s ease-in-out;
 }
 
 .contact-item a:hover {
-  color: #6d3e1d;
-  text-decoration: underline;
-  background-color: #f7f3e8; /* Light tan highlight */
-  padding: 2px 4px;
+  color: #ffffff; /* White text on hover */
+  background-color: #34495e; /* Dark Slate bg on hover */
+  padding: 3px 6px;
   border-radius: 3px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  text-decoration: none;
 }
 
 .separator {
-  color: #c9b8a8; /* Lighter brown for separator */
+  color: #95a5a6; /* Cool gray separator */
   margin: 0 5px;
 }
 
-/* Divider changed to a unique double-line */
+/* Divider is now a single, sleek, modern line */
 .divider {
   width: 80%;
-  height: 3px; /* <-- Changed */
-  background-color: transparent; /* <-- Changed */
-  border-top: 1px solid #dcd3c4; /* <-- Added */
-  border-bottom: 1px solid #dcd3c4; /* <-- Added */
+  height: 1px; /* Changed */
+  background-color: #bdc3c7; /* Changed */
   margin: 20px auto 0;
+  border: none; /* Removed double border */
 }
 
-/* Content Styles
-  - Section titles use 'Montserrat' and a matching double-line border.
-*/
+/* --- Content Styles --- */
 .cv-content {
   margin-top: 30px;
 }
@@ -119,31 +114,30 @@ body {
   margin-bottom: 35px;
 }
 
+/* Section title has new accent border */
 .section-title {
   font-family: 'Montserrat', sans-serif;
   font-size: 1.3rem;
   font-weight: 700;
   letter-spacing: 2px;
-  color: #3b322c;
+  color: #2c3e50;
   margin-bottom: 20px;
   padding-bottom: 8px;
-  border-bottom-width: 3px; /* <-- Changed */
-  border-bottom-style: double; /* <-- Changed */
-  border-bottom-color: #c9b8a8; /* <-- Changed */
+  border-bottom-width: 2px; /* Changed */
+  border-bottom-style: solid; /* Changed */
+  border-bottom-color: #1abc9c; /* Teal Accent */
   text-transform: uppercase;
 }
 
-/* Profile Section */
+/* --- Profile Section --- */
 .profile-text {
   font-size: 1rem;
-  color: #4a403a;
+  color: #333;
   text-align: justify;
   line-height: 1.8;
 }
 
-/* Skills Section
-  - Bullet points are now a "rust" brown accent color.
-*/
+/* --- Skills Section --- */
 .skills-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -166,30 +160,28 @@ body {
   padding-left: 25px;
   margin-bottom: 12px;
   font-size: 0.95rem;
-  color: #4a403a;
+  color: #333;
   line-height: 1.6;
-  transition: all 0.3s ease-in-out; /* <-- Added transition */
+  transition: all 0.3s ease-in-out;
 }
 
+/* Bullets are now the new "Teal" accent */
 .skills-list li::before {
   content: "•";
   position: absolute;
   left: 5px;
-  color: #a05a2c; /* Accent color for bullets */
+  color: #1abc9c; /* Teal Accent */
   font-weight: bold;
   font-size: 1.2rem;
 }
 
-/* Skill items "nudge" right on hover */
+/* Hover effect now turns the text a darker teal */
 .skills-list li:hover {
   transform: translateX(5px);
-  color: #3b322c; /* Make text slightly darker on hover */
+  color: #16a085; /* Darker Teal on hover */
 }
 
-/* Technical Skills Section
-  - Categories now have a light tan background.
-  - Border color matches the new theme.
-*/
+/* --- Technical Skills Section --- */
 .tech-categories {
   display: flex;
   flex-direction: column;
@@ -197,36 +189,37 @@ body {
   margin-top: 20px;
 }
 
+/* Tech cards are now white for contrast, with a teal border */
 .tech-category {
-  background-color: #f7f3e8; /* Light tan background */
+  background-color: #ffffff; /* Clean white background */
   padding: 15px 20px;
   border-radius: 5px;
-  border-left: 4px solid #a05a2c; /* Accent color border */
-  transition: all 0.3s ease-in-out; /* <-- Added transition */
+  border-left: 4px solid #1abc9c; /* Teal Accent */
+  transition: all 0.3s ease-in-out;
 }
 
-/* Tech cards "lift up" on hover */
+/* "Lift" effect now has a shadow matching the theme */
 .tech-category:hover {
   transform: translateY(-5px);
-  box-shadow: 0 6px 15px rgba(74, 64, 58, 0.15);
-  border-left-color: #c79a63; /* Change border to a "gold" accent */
+  box-shadow: 0 6px 15px rgba(44, 62, 80, 0.2); /* Slate-colored shadow */
+  border-left-color: #16a085; /* Darker Teal on hover */
 }
 
 .category-title {
   font-family: 'Montserrat', sans-serif;
   font-size: 1.05rem;
   font-weight: 600;
-  color: #3b322c;
+  color: #34495e;
   margin-bottom: 8px;
 }
 
 .tech-items {
   font-size: 0.95rem;
-  color: #5c5048;
+  color: #555;
   line-height: 1.6;
 }
 
-/* Responsive Design (Unchanged) */
+/* --- Responsive Design (Unchanged) --- */
 @media (max-width: 768px) {
   .cv-container {
     padding: 30px 25px;
@@ -284,10 +277,11 @@ body {
   }
 }
 
-/* Print Styles (Tweaked to remove box shadow & bg for printing) */
+/* --- Print Styles (Tweaked) --- */
 @media print {
   body {
     background: none;
+    color: #000;
   }
 
   .cv-container {
@@ -297,14 +291,36 @@ body {
     margin: 0;
     border-radius: 0;
     border: none;
+    background-color: #ffffff;
+    color: #000;
   }
 
-  .name {
-    font-size: 2.5rem;
+  .name, .section-title, .contact-item strong, .category-title {
+    color: #000;
+  }
+
+  .contact-item a {
+    color: #000;
+    text-decoration: underline;
+  }
+
+  .divider {
+    background-color: #ccc;
   }
 
   .section-title {
     page-break-after: avoid;
+    border-bottom-color: #ccc;
+  }
+
+  .skills-list li::before {
+    color: #000;
+  }
+
+  .tech-category {
+    background-color: #f9f9f9;
+    border-left: 4px solid #ccc;
+    page-break-inside: avoid;
   }
 
   .profile-section,
