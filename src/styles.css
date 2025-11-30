@@ -1,1 +1,65 @@
 /* You can add global styles to this file, and also import other style files */
+/* You can add global styles to this file, and also import other style files */
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Montserrat:wght@500;600;700&display=swap');
+
+/* --- Keyframes for animated background --- */
+@keyframes pan {
+  0% { background-position: 0% 0%; }
+  100% { background-position: 100% 0%; }
+}
+
+/* --- Global Styles --- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  font-family: 'Lato', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background-color: #34495e;
+  background-image: url('https://www.transparenttextures.com/patterns/wood-pattern.png'); /* Wood Texture */
+  background-attachment: fixed;
+  animation: pan 90s linear infinite;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start; /* Changed to flex-start so long content scrolls */
+  min-height: 100vh;
+}
+
+/* --- Main Layout Container --- */
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px 30px;
+  background-color: rgba(255, 255, 255, 0.95); /* Glass effect / Paper look */
+  border-radius: 20px;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.5);
+  max-width: 800px;
+  width: 95%;
+  text-align: center;
+  border: 4px solid #8B5E3C; /* Wood Border */
+  margin: 40px auto;
+}
+
+/* --- Global Headings --- */
+h1 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #3E2C1C;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+}
+
+h2 {
+  color: #5C3A21;
+  margin-bottom: 10px;
+  font-size: 1.5rem;
+  font-family: 'Montserrat', sans-serif;
+}
